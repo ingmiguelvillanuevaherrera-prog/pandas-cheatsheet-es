@@ -593,8 +593,6 @@ Del histograma ajustado de `price`, la conclusión tentadora es: *"la mayoría d
 
 ### 40.1 Las tres formas y la historia que cuenta cada una
 
-> 📊 **Qué deberías ver:** las tres curvas de referencia (`40-1_curva_normal.png`, `40-1_sesgo_derecha.png`, `40-1_sesgo_izquierda.png`).
-
 | Forma | Señal numérica | Ejemplos en retail | Qué reportar | Lectura de negocio |
 |---|---|---|---|---|
 | **Normal / simétrica** | media ≈ mediana ≈ moda | Tiempos de entrega estables, edades en mercados amplios | La **media** describe bien | Comportamiento estable y predecible; el proceso está bajo control |
@@ -612,8 +610,6 @@ import matplotlib.pyplot as plt
 sns.histplot(df['order_value'], bins=50, color='skyblue', kde=True)
 plt.show()
 ```
-
-> 📊 **Qué deberías ver:** `40-2_order_value_kde.png`, `40-2_customer_age_kde.png` y `40-2_price_kde.png`.
 
 | Columna | Lo que se ve | Lectura |
 |---|---|---|

@@ -49,8 +49,6 @@ outliers = df[(df["nombre_columna"] < valla_inf) | (df["nombre_columna"] > valla
 print(len(outliers), "outliers —", round(len(outliers) / len(df) * 100, 2), "%")
 ```
 
-> 📊 **Qué deberías ver:** el diagrama de anatomía del boxplot (`39_anatomia_boxplot.png`).
-
 ⚠️ **Tres errores frecuentes en los diagramas de anatomía del boxplot que circulan por ahí:**
 
 1. **Etiqueta el extremo del bigote como "Q4". Es falso.** El bigote **no llega hasta la valla**: llega hasta el **último dato real** que cae dentro de ella. Q4 sería el máximo, y el máximo normalmente queda *fuera* del bigote, dibujado como punto.
@@ -95,9 +93,7 @@ plt.show()
 
 Hacen lo mismo. La primera es la que escala mejor cuando añades `y=` para comparar por categoría (sección 26).
 
-> 📊 **Qué deberías ver:** boxplot de préstamos (`39_boxplot_prestamos.png`).
-
-**Cómo se lee ese ejemplo:** la caja es estrecha y está pegada a la izquierda → la mayoría de los préstamos son montos pequeños y muy parecidos entre sí. El bigote llega a \~10K → ese es el rango "normal". Los puntos aislados entre 40K y 80K están fuera de la valla → préstamos excepcionalmente grandes. Ojo con el hueco: **no hay nada entre 10K y 40K**, y un salto vacío así suele indicar dos poblaciones distintas mezcladas (préstamos personales vs. algo más), no una cola continua.
+💡 **Cómo se lee un caso real.** En un boxplot de montos de préstamos, la caja es estrecha y está pegada a la izquierda → la mayoría de los préstamos son montos pequeños y muy parecidos entre sí. El bigote llega a \~10K → ese es el rango "normal". Los puntos aislados entre 40K y 80K están fuera de la valla → préstamos excepcionalmente grandes. Ojo con el hueco: **no hay nada entre 10K y 40K**, y un salto vacío así suele indicar dos poblaciones distintas mezcladas (préstamos personales vs. algo más), no una cola continua.
 
 ### 39.5 Leer sesgo, dispersión y outliers en cada gráfico
 
